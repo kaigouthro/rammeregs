@@ -1,8 +1,4 @@
 import { Module } from "@nestjs/common";
-import { SampleFileModule } from "./sampleFile/sampleFile.module";
-import { GrammarFileModule } from "./grammarFile/grammarFile.module";
-import { FixSuggestionModule } from "./fixSuggestion/fixSuggestion.module";
-import { ErrorListModule } from "./errorList/errorList.module";
 import { ErrorModuleModule } from "./ErrorModule/errormodule.module";
 import { FixModuleModule } from "./FixModule/fixmodule.module";
 import { GrammarModuleModule } from "./GrammarModule/grammarmodule.module";
@@ -23,10 +19,6 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
   imports: [
     StorageModule,
     KafkaModule,
-    SampleFileModule,
-    GrammarFileModule,
-    FixSuggestionModule,
-    ErrorListModule,
     ErrorModuleModule,
     FixModuleModule,
     GrammarModuleModule,
