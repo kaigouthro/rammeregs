@@ -1,6 +1,4 @@
 import { Module } from "@nestjs/common";
-import { GrammarFileModule } from "./grammarFile/grammarFile.module";
-import { SampleFileModule } from "./sampleFile/sampleFile.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -13,8 +11,6 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
 @Module({
   controllers: [],
   imports: [
-    GrammarFileModule,
-    SampleFileModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,

@@ -5,14 +5,6 @@ import { theme } from "./theme/theme";
 import Login from "./Login";
 import "./App.scss";
 import Dashboard from "./pages/Dashboard";
-import { GrammarFileList } from "./grammarFile/GrammarFileList";
-import { GrammarFileCreate } from "./grammarFile/GrammarFileCreate";
-import { GrammarFileEdit } from "./grammarFile/GrammarFileEdit";
-import { GrammarFileShow } from "./grammarFile/GrammarFileShow";
-import { SampleFileList } from "./sampleFile/SampleFileList";
-import { SampleFileCreate } from "./sampleFile/SampleFileCreate";
-import { SampleFileEdit } from "./sampleFile/SampleFileEdit";
-import { SampleFileShow } from "./sampleFile/SampleFileShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -38,22 +30,7 @@ const App = (): React.ReactElement => {
         theme={theme}
         dashboard={Dashboard}
         loginPage={Login}
-      >
-        <Resource
-          name="GrammarFile"
-          list={GrammarFileList}
-          edit={GrammarFileEdit}
-          create={GrammarFileCreate}
-          show={GrammarFileShow}
-        />
-        <Resource
-          name="SampleFile"
-          list={SampleFileList}
-          edit={SampleFileEdit}
-          create={SampleFileCreate}
-          show={SampleFileShow}
-        />
-      </Admin>
+      ></Admin>
     </div>
   );
 };
