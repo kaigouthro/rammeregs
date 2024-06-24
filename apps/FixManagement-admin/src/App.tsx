@@ -5,10 +5,6 @@ import { theme } from "./theme/theme";
 import Login from "./Login";
 import "./App.scss";
 import Dashboard from "./pages/Dashboard";
-import { FixSuggestionList } from "./fixSuggestion/FixSuggestionList";
-import { FixSuggestionCreate } from "./fixSuggestion/FixSuggestionCreate";
-import { FixSuggestionEdit } from "./fixSuggestion/FixSuggestionEdit";
-import { FixSuggestionShow } from "./fixSuggestion/FixSuggestionShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -34,15 +30,7 @@ const App = (): React.ReactElement => {
         theme={theme}
         dashboard={Dashboard}
         loginPage={Login}
-      >
-        <Resource
-          name="FixSuggestion"
-          list={FixSuggestionList}
-          edit={FixSuggestionEdit}
-          create={FixSuggestionCreate}
-          show={FixSuggestionShow}
-        />
-      </Admin>
+      ></Admin>
     </div>
   );
 };

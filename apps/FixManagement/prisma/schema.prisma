@@ -6,11 +6,3 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
-
-model FixSuggestion {
-  applied    Boolean?
-  createdAt  DateTime @default(now())
-  id         String   @id @default(cuid())
-  suggestion String?
-  updatedAt  DateTime @updatedAt
-}
